@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Données depuis SFTP</title>
+</head>
+<body>
+  <h1>Contenu :</h1>
+  <pre id="output">Chargement...</pre>
+
+  <script>
+    fetch('/data')
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('output').innerText = data.content;
+      })
+      .catch(error => {
+        document.getElementById('output').innerText = "Erreur : " + error;
+      });
+  </script>
+</body>
+</html>
