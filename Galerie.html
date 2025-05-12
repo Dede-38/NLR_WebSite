@@ -13,50 +13,29 @@
 </head>
 <body>
 
-  <header>
-    <div class="logo-section">
-      <img src="Images/logo.png" alt="NLR Esport Logo">
-    </div>
-    <nav class="menu" id="nav">
-        <span class="nav-item ">
-            <span class="icon">
-                <i data-feather="home"></i>
-            </span>
-            <a href="Accueil.html">Accueil</a>
-        </span>
-        <span class="nav-item">
-            <span class="icon">
-                <i data-feather="search"></i>
-            </span>
-            <a href="Pilotes.html">Pilotes</a>
-        </span>
-        <span class="nav-item">
-            <span class="icon">
-                <i data-feather="bell"></i>
-            </span>
-            <a href="Calendrier.html">Calendrier</a>
-        </span>
-        <span class="nav-item">
-            <span class="icon">
-                <i data-feather="star"></i>
-            </span>
-            <a href="Résultats.html">Résultats</a>
-        </span>
-        <span class="nav-item active">
-            <span class="icon">
-                <i data-feather="bell"></i>
-            </span>
-            <a href="Galerie.html">Galerie</a>
-        </span>
-    </nav>
-    <div class="login">
-  <a href="Login.html" class="btn-login-header">
-    <span class="icon">👤</span> Se connecter
-  </a>
-</div>
+   <div id="header"></div>
+<script>
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header').innerHTML = data;
+            feather.replace(); // Initialiser les icônes
+            highlightActivePage();
+        })
+        .catch(error => console.error('Erreur lors du chargement du header:', error));
+    
+        function highlightActivePage() {
+        const currentPage = window.location.pathname.split("/").pop();
+        const navItems = document.querySelectorAll('.nav-item');
 
-  </header>
-
+        navItems.forEach(item => {
+            const page = item.getAttribute('data-page');
+            if (page === currentPage) {
+                item.classList.add('active');
+            }
+        });
+    }
+</script>
   <section class="galerie">
     <h2>Galerie Photo de Course</h2>
     <div class="grid-gallery">
@@ -90,28 +69,14 @@
      </div>
   </section>
 
-  <footer>
-    <div class="footer-left">
-      <img src="logo-nlr.png" alt="Logo NLR">
-    </div>
-    <div class="footer-center">
-      <p>NLR Esport 2025 - Tout droits réservés</p>
-      <div class="social-icons">
-        <a href="#">🐦</a>
-        <a href="#">📘</a>
-        <a href="#">▶️</a>
-        <a href="#">📷</a>
-      </div>
-    </div>
-    <div class="footer-right">
-      <ul>
-        <li><a href="Calendrier.html">Calendrier</a></li>
-        <li><a href="Pilotes.html">Pilotes</a></li>
-        <li><a href="Résultats.html">Résultats</a></li>
-        <li><a href="Galerie.html">Galerie</a></li>
-      </ul>
-    </div>
-  </footer>
+   <div id="footer"></div>
+<script>
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
+        });
+</script>
 
   <script>
     feather.replace();
