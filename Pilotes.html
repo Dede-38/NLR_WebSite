@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connexion - NLR Esport</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/feather-icons"></script>
+
+</head>
+<body>
+  <header>
+    <div class="logo-section">
+      <img src="Images/logo.png" alt="NLR Esport Logo">
+    </div>
+    <nav class="menu" id="nav">
+        <span class="nav-item ">
+            <span class="icon">
+                <i data-feather="home"></i>
+            </span>
+            <a href="Accueil.html">Accueil</a>
+        </span>
+        <span class="nav-item">
+            <span class="icon">
+                <i data-feather="search"></i>
+            </span>
+            <a href="Pilotes.html">Pilotes</a>
+        </span>
+        <span class="nav-item">
+            <span class="icon">
+                <i data-feather="bell"></i>
+            </span>
+            <a href="Calendrier.html">Calendrier</a>
+        </span>
+        <span class="nav-item">
+            <span class="icon">
+                <i data-feather="star"></i>
+            </span>
+            <a href="Résultats.html">Résultats</a>
+        </span>
+        <span class="nav-item active">
+            <span class="icon">
+                <i data-feather="bell"></i>
+            </span>
+            <a href="Galerie.html">Galerie</a>
+        </span>
+    </nav>
+    <div class="login">
+  <a href="Login.html" class="btn-login-header">
+    <span class="icon">👤</span> Se connecter
+  </a>
+</div>
+
+  </header>
+
+   <section class="hero">
+    <div class="carousel-background">
+      <img src="Images/Pilotes/Pilotes1.jpg" alt="Image 1">
+      <img src="Images/Pilotes/Pilotes2.jpg" alt="Image 1">
+       </div>
+    <div class="hero-content">
+      <h1>Team NLR Esport</h1>
+      <h2>Next Level Racing Esport</h2>
+    </div>
+  </section>
+
+   <script>
+    const images = document.querySelectorAll('.carousel-background img');
+    let index = 0;
+  
+    function showNextImage() {
+      images.forEach((img, i) => img.classList.remove('active'));
+      images[index].classList.add('active');
+      index = (index + 1) % images.length;
+    }
+  
+    showNextImage(); // Afficher la première image
+    setInterval(showNextImage, 10000); // Changer toutes les 4 secondes
+  </script>
+  
+
+  <section class="pilotes">
+    <h3>Les pilotes de l’équipe</h3>
+    <div class="pilotes-grid">
+      <a class="pilote" href="fiche-pilote.html?nom=Enzo&numero=2&photo=Images/pilote.jpg&id-PSN=NLR_ZoLac">
+  <img src="Images/pilote.jpg" alt="Enzo">
+  <h4>Enzo</h4>
+  <p>NLR_ZoLac - #2</p>
+</a>
+<a class="pilote" href="fiche-pilote.html?nom=Enzo&numero=2&photo=Images/Pilotes/Enzo.png&id-PSN=NLR_ZoLac">
+  <img src="Images/Pilotes/Enzo.png" alt="Enzo">
+  <h4>Enzo</h4>
+  <p>NLR_ZoLac - #2</p>
+</a>
+<a class="pilote" href="fiche-pilote.html?nom=Bruno&numero=13&photo=Images/Pilotes/HnBal.png&id-PSN=NLR_HnBal_974">
+  <img src="Images/Pilotes/HnBal.png" alt="Bruno">
+  <h4>Bruno</h4>
+  <p>NLR_HnBal_974 - #13</p>
+</a>
+<a class="pilote" href="fiche-pilote.html?nom=Lucas&numero=14&photo=Images/Pilotes/Dede.png&id-PSN=NLR_Dede">
+  <img src="Images/Pilotes/Dede.png" alt="Lucas">
+  <h4>Lucas</h4>
+  <p>NLR_Dede - #14</p>
+</a>
+<a class="pilote" href="fiche-pilote.html?nom=Melvyn&numero=16&photo=Images/Pilotes/Melvyn.png&id-PSN=NLR_Melvyn">
+  <img src="Images/Pilotes/Melvyn.png" alt="Melvyn">
+  <h4>Melvyn</h4>
+  <p>NLR_Melvyn - #16</p>
+</a>
+<a class="pilote" href="fiche-pilote.html?nom=Nicolas&numero=18&photo=Images/Pilotes/Biotron.png&id-PSN=NLR_Biotron">
+  <img src="Images/Pilotes/Biotron.png" alt="Nicolas">
+  <h4>Nicolas</h4>
+  <p>NLR_Biotron - #18</p>
+</a>
+<a class="pilote" href="fiche-pilote.html?nom=Bryan&numero=20&photo=Images/Pilotes/Ragnarok.png&id-PSN=NLR_Ragnarok">
+  <img src="Images/Pilotes/Ragnarok.png" alt="Bryan">
+  <h4>Bryan</h4>
+  <p>NLR_Ragnarok - #20</p>
+</a>
+<a class="pilote" href="fiche-pilote.html?nom=Kévin&numero=24&photo=Images/Pilotes/Smogogo.png&id-PSN=NLR_Smogogo">
+  <img src="Images/Pilotes/Smogogo.png" alt="Kévin">
+  <h4>Kévin</h4>
+  <p>NLR_Smogogo - #24</p>
+</a>
+<a class="pilote" href="fiche-pilote.html?nom=Benjamin&numero=29&photo=Images/Pilotes/Kenpachi.png&id-PSN=NLR_Kenpachi">
+  <img src="Images/Pilotes/Kenpachi.png" alt="Benjamin">
+  <h4>Benjamin</h4>
+  <p>NLR_Kenpachi - #29</p>
+</a>
+<a class="pilote" href="fiche-pilote.html?nom=Yoann&numero=35&photo=Images/Pilotes/Yoann.png&id-PSN=NLR_YoannB">
+  <img src="Images/Pilotes/Yoann.png" alt="Yoann">
+  <h4>Yoann</h4>
+  <p>NLR_YoannB - #35</p>
+</a>
+<a class="pilote" href="fiche-pilote.html?nom=Quentin&numero=38&photo=Images/Pilotes/Rochi.png&id-PSN=NLR_M-Roshi">
+  <img src="Images/Pilotes/Rochi.png" alt="Quentin">
+  <h4>Quentin</h4>
+  <p>NLR_M-Roshi - #38</p>
+</a>
+<a class="pilote" href="fiche-pilote.html?nom=Thibaut&numero=41&photo=Images/Pilotes/ThibRacingF1.png&id-PSN=NLR_ThibRacingF1">
+  <img src="Images/Pilotes/ThibRacingF1.png" alt="Thibaut">
+  <h4>Thibaut</h4>
+  <p>NLR_ThibRacingF1 - #41</p>
+</a>
+<a class="pilote" href="fiche-pilote.html?nom=Anthony&numero=46&photo=Images/Pilotes/Tosh.png&id-PSN=NLR_Tosh">
+  <img src="Images/Pilotes/Tosh.png" alt="Anthony">
+  <h4>Anthony</h4>
+  <p>NLR_Tosh - #46</p>
+</a>
+<a class="pilote" href="fiche-pilote.html?nom=Jean-Jacques&numero=53&photo=Images/Pilotes/BisonFute.png&id-PSN=NLR_Bison-Fute">
+  <img src="Images/Pilotes/BisonFute.png" alt="Jean-Jacques">
+  <h4>Jean-Jacques</h4>
+  <p>NLR_Bison-Fute - #53</p>
+</a>
+<a class="pilote" href="fiche-pilote.html?nom=Michel&numero=54&photo=Images/Pilotes/Mich.png&id-PSN=NLR_Mich">
+  <img src="Images/Pilotes/Mich.png" alt="Michel">
+  <h4>Michel</h4>
+  <p>NLR_Mich - #54</p>
+</a>
+<a class="pilote" href="fiche-pilote.html?nom=Nicolas&numero=69&photo=Images/Pilotes/Nico69.png&id-PSN=NLR_Nico69">
+  <img src="Images/Pilotes/Nico69.png" alt="Nicolas">
+  <h4>Nicolas</h4>
+  <p>NLR_Nico69 - #69</p>
+</a>
+<a class="pilote" href="fiche-pilote.html?nom=Thierry&numero=71&photo=Images/Pilotes/Starsky.png&id-PSN=NLR_Starsky">
+  <img src="Images/Pilotes/Starsky.png" alt="Thierry">
+  <h4>Thierry</h4>
+  <p>NLR_Starsky - #71</p>
+</a>
+<a class="pilote" href="fiche-pilote.html?nom=Stéphane&numero=73&photo=Images/Pilotes/Axl-r.png&id-PSN=NLR_Axl-R">
+  <img src="Images/Pilotes/Axl-r.png" alt="Stéphane">
+  <h4>Stéphane</h4>
+  <p>NLR_Axl-R - #73</p>
+</a>
+<a class="pilote" href="fiche-pilote.html?nom=Louis&numero=77&photo=Images/Pilotes/Joloupi.png&id-PSN=NLR_JoloupiO">
+  <img src="Images/Pilotes/Joloupi.png" alt="Louis">
+  <h4>Louis</h4>
+  <p>NLR_JoloupiO - #77</p>
+</a>
+<a class="pilote" href="fiche-pilote.html?nom=Thibaut&numero=89&photo=Images/Pilotes/SoPr4.png&id-PSN=NLR_SoPr4">
+  <img src="Images/Pilotes/SoPr4.png" alt="Thibaut">
+  <h4>Thibaut</h4>
+  <p>NLR_SoPr4 - #89</p>
+</a>
+<a class="pilote" href="fiche-pilote.html?nom=Jérémy&numero=92&photo=Images/Pilotes/Pirate.png&id-PSN=NLR_Pirate">
+  <img src="Images/Pilotes/Pirate.png" alt="Jérémy">
+  <h4>Jérémy</h4>
+  <p>NLR_Pirate - #92</p>
+</a>
+<a class="pilote" href="fiche-pilote.html?nom=Riyad&numero=99&photo=Images/Pilotes/Brabus.png&id-PSN=NLR_Brabus">
+  <img src="Images/Pilotes/Brabus.png" alt="Riyad">
+  <h4>Riyad</h4>
+  <p>NLR_Brabus - #99</p>
+</a>
+<a class="pilote" href="fiche-pilote.html?nom=Valentin&numero=100&photo=Images/Pilotes/Mugen.png&id-PSN=NLR_Mugen">
+  <img src="Images/Pilotes/Mugen.png" alt="Valentin">
+  <h4>Valentin</h4>
+  <p>NLR_Mugen - #100</p>
+</a>
+<a class="pilote" href="fiche-pilote.html?nom=Gabriel&numero=203&photo=Images/Pilotes/Leirbag.png&id-PSN=NLR_Leirbag">
+  <img src="Images/Pilotes/Leirbag.png" alt="Gabriel">
+  <h4>Gabriel</h4>
+  <p>NLR_Leirbag - #203</p>
+</a>
+
+
+      
+      
+     </div>
+  </section>
+  <footer>
+    <div class="footer-left">
+      <img src="Images/logo.png" alt="NLR Logo">
+    </div>
+    <div class="footer-center">
+      <p>NLR Esport 2025 - Tout droits réservés</p>
+      <div class="social-icons">
+        <a href="#">🐦</a>
+        <a href="#">📘</a>
+        <a href="#">▶️</a>
+        <a href="#">📷</a>
+      </div>
+    </div>
+    <div class="footer-right">
+        <ul>
+          <li><a href="Calendrier.html">Calendrier</a></li>
+          <li><a href="Pilotes.html">Pilotes</a></li>
+          <li><a href="Résultats.html">Résultats</a></li>
+          <li><a href="Galerie.html">Galerie</a></li>
+        </ul>
+      </div>
+  </footer>
+  <script>
+    feather.replace();
+  </script>
+</body>
+</html>
